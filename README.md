@@ -5,6 +5,14 @@ Overview
 ## Description
 
 ## Demo
+### Prepare database
+```
+CREATE DATABASE library;
+USE library;
+CREATE TABLE books (title VARCHAR(100));
+INSERT into books (title) VALUES ("Cloud SQL");
+```
+
 ### Create Docker Bridge Network
 ```
 $ docker network create -d bridge proxy

@@ -5,6 +5,11 @@ Overview
 ## Description
 
 ## Demo
+### Connect Cloud SQL Instance
+```
+$ gcloud sql connect <INSTANCE_NAME> --user=root --quiet
+```
+
 ### Prepare database
 ```
 CREATE DATABASE library;

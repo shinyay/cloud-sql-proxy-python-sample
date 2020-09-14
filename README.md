@@ -5,6 +5,11 @@ Overview
 ## Description
 
 ## Demo
+### Create Docker Bridge Network
+```
+$ docker network create -d bridge proxy
+```
+
 ```
 $ docker run --name cloud_sql_proxy --net=proxy -d --rm -p 3306:3306 gcr.io/cloudsql-docker/gce-proxy:1.16 /cloud_sql_proxy -instances=<CLOUD_SQL_CONNECTION_STRING>=tcp:0.0.0.0:3306
 ```

@@ -12,8 +12,19 @@ $ docker network create -d bridge proxy
 
 ### Create Docker image for python app
 ```
+$ docker built -t <CONTAINER_NAME> .
+```
+
+### Run Cloud SQL Proxy container
+```
 $ docker run --name cloud_sql_proxy --net=proxy -d --rm -p 3306:3306 gcr.io/cloudsql-docker/gce-proxy:1.16 /cloud_sql_proxy -instances=<CLOUD_SQL_CONNECTION_STRING>=tcp:0.0.0.0:3306
 ```
+
+### Run Sample Python App with Docker Network
+```
+$ docker run --rm -it --net=proxy <CONTAINER_NAME>
+```
+
 
 ## Features
 
